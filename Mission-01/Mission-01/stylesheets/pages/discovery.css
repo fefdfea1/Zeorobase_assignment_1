@@ -1,0 +1,215 @@
+/* CSS 작성 */
+/* 가운데 정렬을 위해 container를 이용하여 전체 영역을 잡음 */
+.container{
+    width: 100vw;
+    height: auto;
+    position: relative;
+
+}
+/* 가로폭 설정과 가운데 정렬을 위한 wrap */
+.wrap{
+    width: 1020px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+section{
+    width: 100%;
+    height: 1158px;
+}
+
+.logo{
+    width: 176px;
+    height: 40px;
+    margin-top: 100px;
+    margin-bottom: 48px;
+}
+
+/* 오늘의 발견 타이틀 */
+.sectionTite{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 23px;
+    padding-bottom: 1px;
+}
+
+.sectionTite h2{
+    margin-right: 10px;
+    font-size: 24px;
+    line-height: 115%;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+}
+
+.sectionTite span:nth-of-type(1){
+    width: 2px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.sectionTite span:nth-of-type(2){
+    font-weight: 500;
+    font-style: normal;
+    line-height: 115%;
+    align-items: center;
+}
+
+/* 상품 페이지  */
+.product_img_bx{
+    height: 310px;
+    float: left;
+    margin-right: 16px;
+}
+
+.product_img_bx:last-child{
+    margin-right: 0;
+}
+
+.product_img_bx a{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+}
+
+.product_top{
+  margin-bottom: 16px;
+}
+
+.product_top .product_img_bx{
+    width: 502px;
+}
+
+
+.product_middle{
+    margin-bottom: 16px;
+}
+
+.product_middle .product_img_bx{
+    width: 243px; 
+}
+
+.product_top::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.product_middle::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.product_bottom .product_img_bx{
+    width: 243px;
+}
+
+.product_bottom .product_img_bx:nth-of-type(1){
+    width: 502px;
+}
+
+.product_bottom::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/* 구매하기 버튼 활성화전 버튼 */
+.buy_Btn{
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 248px;
+    left: 20px;
+    border: 0;
+    cursor: pointer;
+}
+
+.buy_Btn::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    border-bottom: 1px solid #f3f3f3;
+    border-right: 1px solid #f3f3f3;
+    display: block;
+}
+/* 구매하기 버튼 활성화 */
+.buy_Btn_active502{
+    width: 112px;
+    height: 42px;
+    position: absolute;
+    top: 248px;
+    right: 370px;
+    border: 0;
+    cursor: pointer;
+    display: none;
+}
+
+.buy_Btn_active243{
+    width: 112px;
+    height: 42px;
+    position: absolute;
+    top: 248px;
+    left: 20px;
+    border: 0;
+    cursor: pointer;
+    display: none;
+}
+
+/* 다른 포지션 값을 가진 502와 243 각각 가상요소를 이용하여 만듬 */
+
+.buy_Btn_active502::before,.buy_Btn_active243::before{
+    content: "구매하기";
+    position: absolute;
+    left: 20px;
+    top: 12px;
+    color:#ffffff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+}
+
+.buy_Btn_active502::after,.buy_Btn_active243::after{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    right: 18px;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    border-bottom: 1px solid #f3f3f3;
+    border-right: 1px solid #f3f3f3;
+    display: block;
+}
+
+.product_img_bx:hover .buy_Btn_active502{
+    display: block;
+}
+
+.product_img_bx:hover .buy_Btn_active243{
+    display: block;
+}
+
+.product_img_bx:hover{
+    transition: 0.5s;
+    border: 1px solid #0074e9;
+}
+
+.product_img_bx a:focus{
+    border: 1px solid #0074E9;
+    transition: 0.5s;
+}
+
+.product_img_bx a:focus .buy_Btn_active{
+    display: block;
+}

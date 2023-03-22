@@ -1,0 +1,31 @@
+/* Theme 스타일 작성 */
+.color_black_500{
+    color:#181818;
+    font-weight: 500;
+}
+
+.color_gray_600{
+    color:#aaa9a9;
+    font-weight: 600;
+}
+
+.color_gray_100{
+    color:#f3f3f3;
+    font-weight: 600;
+}
+
+.color_white_500{
+    color: #ffffff;
+}
+
+.background_blue_600{
+    background-color: #0074E9;
+}
+
+.background_gray_opacity02{
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.border_gray_500{
+    border: 1px solid #C4C4C4;
+}
